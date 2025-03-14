@@ -4,6 +4,7 @@ use App\Http\Controllers\CommandController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductInfoController;
+use App\Http\Controllers\BrandController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,7 @@ Route::get('products', [ProductController::class, 'index']);
 Route::post('products', [ProductController::class, 'store']);
 Route::delete('products/{idProduct}', [ProductController::class, 'destroy']);
 Route::put('products', [ProductController::class, 'update']);
-
+Route::apiResource('brands', BrandController::class);
 
 Route::get('command', [CommandController::class, 'index']);
 Route::post('command', [CommandController::class, 'store']);
