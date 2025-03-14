@@ -15,7 +15,10 @@ class Product extends Model
         'description',
         'weight',
         'pallet_quantity',
-        'brand_id'
+        'brand_id',
+        'composition',  // Add this line for the new field
+        'conseil',      // Add this line for the new field
+        'conditionnement', // Add this line for the new field
     ];
     protected $keyType = 'string';
 
